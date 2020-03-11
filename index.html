@@ -7,11 +7,14 @@
   <body>
     <div class="container">
       <!-- HERE IS WHERE YOU WANT TO ADD AN INPUT FOR YOUR SEARCH WORDS -->
+      <p>Enter in your text to search for a word: <input type='text' name='text' value='' onchange="searchWord(this.value)"/></p>
       <!-- HERE IS WHERE YOU WANT TO ADD YOUR WORD CARDS -->
+      <div class='cards'></div>
       <!-- HERE IS WHERE YOU WANT TO ADD AN INPUT FOR YOUR SEARCH SPANISH WORDS -->
       <!-- HERE IS WHERE YOU WANT TO ADD YOUR SPANISH WORD CARDS -->
     </div>
     <!-- TODO: add CDN library here -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
