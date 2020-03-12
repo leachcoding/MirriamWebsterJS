@@ -12,7 +12,10 @@
       <div class='cards'></div>
       <button onclick="removeCard()">REMOVE A CARD</button>
       <!-- HERE IS WHERE YOU WANT TO ADD AN INPUT FOR YOUR SEARCH SPANISH WORDS -->
+      <p>Enter in your text to search for a Spanish word: <input type='text' name='text' value='' onchange="searchSpanishWord(this.value)"/></p>
       <!-- HERE IS WHERE YOU WANT TO ADD YOUR SPANISH WORD CARDS -->
+      <div class='spanishCards'></div>
+      <button onclick="removeSpanishCard()">REMOVE A CARD</button>
     </div>
     <!-- TODO: add CDN library here -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
