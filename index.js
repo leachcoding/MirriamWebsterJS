@@ -14,7 +14,6 @@ function searchWord(val) {
       newStems = document.createElement('p'),
       newShortDef = document.createElement('p'),
       newDefDate = document.createElement('p')
-
     // Set your content
     newId.textContent = `Id: ${data.meta.id}`;
     newSrc.textContent = `Source: ${data.meta.src}`;
@@ -38,6 +37,7 @@ function searchWord(val) {
 
   // This is the card
   const cards = document.querySelector('.cards');
+
   let cardInfo = [];
 
   axios
@@ -57,6 +57,11 @@ function searchWord(val) {
     })
 
     // THIS IS A COMMENT
+}
+
+function removeCard() {
+  let elements = document.querySelectorAll('.card');
+  elements.forEach(el => el.remove());
 }
 
 // STEP 2: USE AXIOS AND SEND A GET REQUEST TO THE FOLLOWING:
