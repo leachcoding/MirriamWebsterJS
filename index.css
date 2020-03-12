@@ -100,15 +100,15 @@ body {
 }
 
 .spanishCard {
-  width: 25%;
+	width: 45%;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 5px;
   box-shadow: 0 1px 6px -2px #000;
   background-color: #FFF;
-  margin-bottom: 30px;
+  margin: 5px 10px 30px 10px;
 }
 
 .spanishCard p {
