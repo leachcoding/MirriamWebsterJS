@@ -1,13 +1,6 @@
 // STEP 1: IN THIS ASSIGNMENT, THINK ABOUT THE RELATIONSHIP BETWEEN HTML AND JS FOR YOUR SEARCH. LOOK INSIDE OF YOUR HTML FILE AS WELL FOR THIS -- YOU WILL NEED A FUNCTION THAT WILL HANDLE YOUR CHANGE EVENT AS A TIP. INSIDE OF THIS SEARCH FUNCTION, YOU WILL NEED TO CREATE A CARD(S) THAT WILL DISPLAY THE SEARCH TERM YOU PROVIDED THROUGH THE MIRRIAM WEBSTER COLLEGIATE DICTIONARY API. LETS DO THIS!!!!
 function searchWord(val) {
   function dictionaryCard(data) {
-
-    function checkIfNull(str) {
-      if(str) {
-        return str;
-      }
-      return '';
-    }
     // Create your elements
     const newCard = document.createElement('div'),
       newId = document.createElement('p'),
@@ -33,7 +26,6 @@ function searchWord(val) {
     // Apply any styles or classes HERE
     newCard.classList.add('card');
 
-
     // Event handlers
     return newCard;
   }
@@ -46,8 +38,9 @@ function searchWord(val) {
   axios
     .get(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${val}?key=e5867ba3-6990-42c4-a680-e9e0709c9c60`)
     .then( response => {
-      console.log(response);
+      // console.log(response);
       console.log(response.data);
+      removeCard();
       response.data.forEach(element => {
         cardInfo.push(element);
       })
@@ -69,12 +62,6 @@ function removeCard() {
 
 function searchSpanishWord(val) {
   function spanishCard(data) {
-    function checkIfNull(str) {
-      if(str) {
-        return str;
-      }
-      return '';
-    }
 
     //Create Elements
     const newCard = document.createElement('div'),
@@ -104,8 +91,9 @@ function searchSpanishWord(val) {
   axios
     .get(`https://www.dictionaryapi.com/api/v3/references/spanish/json/${val}?key=94262e67-155d-4509-839a-896e030e5316`)
     .then(response => {
-      console.log(response, "SPANISH RESPONSE");
-      console.log(response.data, "SPANISH RESPONSE.DATA");
+      // console.log(response, "SPANISH RESPONSE");
+      // console.log(response.data, "SPANISH RESPONSE.DATA");
+      removeSpanishCard();
       response.data.forEach(element => {
         spanishCardInfo.push(element);
       })

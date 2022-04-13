@@ -70,6 +70,28 @@ body {
   align-items: center;
 }
 
+button {
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: darkslateblue;
+  color: whitesmoke;
+  min-width: 250px;
+  border-radius: 5px;
+}
+
+label {
+  font-size: 1.75rem;
+  text-shadow: 1px 1px 2px darkslateblue;
+  margin: 0px 0px 5px 0px;
+}
+
+input {
+  min-width: 50%;
+  min-height: 30px;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
 .cards {
   width: 100%;
   display: flex;
@@ -77,7 +99,8 @@ body {
 }
 
 .card {
-  width: 45%;
+  flex: 1;
+  min-width: 40%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -85,7 +108,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 1px 6px -2px #000;
   background-color: #FFF;
-  margin: 5px 10px 30px 10px;
+  margin: 5px 10px;
 }
 
 .card p {

@@ -5,18 +5,22 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <div class="container">
+    <section class="container">
       <!-- HERE IS WHERE YOU WANT TO ADD AN INPUT FOR YOUR SEARCH WORDS -->
-      <p>Enter in your text to search for a word: <input type='text' name='text' value='' onchange="searchWord(this.value)"/></p>
+      <button onclick="removeCard()">REMOVE CARDS</button>
+      <label for="searchEnglish">Enter in your text to search for a word: </label> 
+      <input type='text' name='text' value='' placeholder="Please search here" oninput="searchWord(this.value)"/>
       <!-- HERE IS WHERE YOU WANT TO ADD YOUR WORD CARDS -->
       <div class='cards'></div>
-      <button onclick="removeCard()">REMOVE A CARD</button>
+      <button onclick="removeCard()">REMOVE CARDS</button>
       <!-- HERE IS WHERE YOU WANT TO ADD AN INPUT FOR YOUR SEARCH SPANISH WORDS -->
-      <p>Enter in your text to search for a Spanish word: <input type='text' name='text' value='' onchange="searchSpanishWord(this.value)"/></p>
+      <button onclick="removeSpanishCard()">REMOVE SPANISH CARDS</button>
+      <label for="searchSpanish">Enter in your text to search for a Spanish word: </label>
+      <input type='text' name='text' value='' placeholder="Please search for spanish terms here" oninput="searchSpanishWord(this.value)"/>
       <!-- HERE IS WHERE YOU WANT TO ADD YOUR SPANISH WORD CARDS -->
       <div class='spanishCards'></div>
-      <button onclick="removeSpanishCard()">REMOVE A CARD</button>
-    </div>
+      <button onclick="removeSpanishCard()">REMOVE SPANISH CARDS</button>
+    </section>
     <!-- TODO: add CDN library here -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
